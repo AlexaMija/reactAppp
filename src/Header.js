@@ -1,30 +1,50 @@
 import React, {Component} from "react"
 import ReactDOM from "react-dom"
 
-class Header extends React.Component {
-  constructor() {
-    super()
+class Header extends Component {
+  constructor () {
+    super ()
     this.state = {
-      isLoggedIn: false
+      firstGratitud: "",
+      secondGratitud: "",
+      thirdGratitud: ""
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
-
-  handleClick() {
-    this.setState(prevState => {
-      return {
-        isLoggedIn : !prevState.isLoggedIn
-      }
+  handleChange(event) {
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
     })
   }
-  render () {
-    let buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOG IN"
-    let displayText = this.state.isLoggedIn ? "Logged in" : "Logged out"
+  render() {
     return (
-      <div>
-      <button onClick={this.handleClick}>{buttonText}</button>
-      <h1>{displayText}</h1>
-      </div>
+      <form>
+      <h3>Navedi tri događaja, stvari, pojave zbog kojih si zahvalan/lna!</h3>
+      <input
+      type="text"
+      value={this.state.firstGratitud}
+      name="firstGratitud"
+      placeholder="Tvoja prva zahvalnost ovog jutra!"
+      onChange={this.handleChange}
+      />
+<br />
+      <input
+      type="text"
+      value={this.state.secondGratitud}
+      name="secondGratitud"
+      placeholder="Tvoja druga zahvalnost ovog jutra!"
+      onChange={this.handleChange}
+      />
+<br />
+      <input
+      type="text"
+      value={this.state.thirdGratitud}
+      name="thirdGratitud"
+      placeholder="Tvoja treća zahvalnost ovog jutra!"
+      onChange={this.handleChange}
+      />
+      </form>
     )
   }
 }
