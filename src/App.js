@@ -1,17 +1,17 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import Header from "./Header"
-import MainContent from "./MainContent"
-import Footer from "./Footer"
-
+import Main from "./Component/Main";
+import "./App.css";
 function App() {
   return (
-    <div>
-    <h1>You can do it!</h1>
-    <Header />
-    <MainContent />
-    <Footer />
+    <div className="App">
+    <Main />
+
     </div>
-  )
+  );
 }
 export default App
+/* "Memory game"
+4 x 4
+React, Redux, Immutable.js
+
+*/
