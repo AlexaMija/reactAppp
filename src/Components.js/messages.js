@@ -1,4 +1,4 @@
-export let = messages = [
+export let messages = [
   {title: "Well Done", message: "How about another go?" },
 
   {title: "Good Job", message: "I bet you can not do that again?" },

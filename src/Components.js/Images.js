@@ -5,15 +5,15 @@ class Images extends React.Component {
   characters = [];
   handleClick = (event) => {
     let character = event.target;
-    if ( character.getAttribute(check) === "found") {
+    if ( character.getAttribute("check") === "found") {
       return;
     }
-    if  (character !== this.characters[0]) {
+    if (character !== this.characters[0]) {
       this.switch(character);
       this.character.push(character);
     } else {
       this.switch(character);
-      this.character = []
+      this.characters = []
       }
       if (this.character.length > 2) {
         if(!this.checkName(this.character[0], this.character[1])) {
@@ -26,7 +26,7 @@ class Images extends React.Component {
           this.character.shift();
         }
       }
-      let allPictures = document.getElementByClassName("image blanc");
+      let allPictures = document.getElementsByClassName("image blanc");
       if (allPictures.length < 1) {
         this.props.endGame(true);
         let reset = document.getElementByClassName("image");
@@ -53,8 +53,8 @@ class Images extends React.Component {
         target.setAttribute("check", "true");
         target.classList.remove("image-blank")
       }
-    }
-    render () {
+    };
+    render() {
       return (
         <div className="images">
         {images
@@ -63,17 +63,15 @@ class Images extends React.Component {
             return (
               <div
               className="image image-blank"
-              name= {element.name}
-              style={{background: 'url(${element.pic})'}}
+              name={element.name}
+              style={{ background: 'url(${element.pic})'}}
               check="false"
               onClick={this.handleClick}
               />
             );
-          })
-        }
-
-        </div>
-      )
+          })}
+</div>
+);
     }
     }
     export default Images;

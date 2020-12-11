@@ -9,7 +9,7 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.name(this.state.name, false);
   };
-  render () {
+  render() {
     return (
       <div className="wrapper">
       <div className="login">
@@ -31,7 +31,7 @@ Submit
       </form>
       </div>
       </div>
-    )
+    );
   }
 }
-export default Login
+export default Login;
