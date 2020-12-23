@@ -6,8 +6,9 @@ import Monica from "./Monica.png";
 import Phoebe from "./Phoebe.png";
 import Rachel from "./Rachel.png";
 import Ross from "./Ross.png";
-import { createStore } from
-"https://unpkg.com/react@16.7.0/umd/react.production.min.js00";
+import { configureStore } from
+"@redux.js/toolkit";
+
 export const initialState = [
   {
     name: "Chandler",
@@ -60,7 +61,7 @@ return state;
   }
 }
 const store = createStore(rootReducer);
-const button = document.getElementById(elementId:"my-button")
+const button = document.getElementById(elementId:"images_for_game")
 button.addEventListener(type:"click", listener: function() {
   const flippedAction = {
     type: "FLIPPED"

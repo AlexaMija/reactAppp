@@ -1,6 +1,6 @@
-import React from "react"
-import "./App.css";
+import React from "react";
 import Main from "./Components/Main";
+import "./App.css";
 function App() {
   return (
     <div className="App">
@@ -8,6 +8,7 @@ function App() {
     </div>
   );
 }
+const images = document.getElementById('images_for_game')
 export default App;
 /* "Memory game"
 4 x 4
