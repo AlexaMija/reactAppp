@@ -1,4 +1,4 @@
-import React from "react";
+import React.Component from "react";
 import Login from "./Login";
 import Game from "./Game";
 import EndGame from "./EndGame";

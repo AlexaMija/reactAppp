@@ -6,10 +6,13 @@ import Monica from "./Monica.png";
 import Phoebe from "./Phoebe.png";
 import Rachel from "./Rachel.png";
 import Ross from "./Ross.png";
+proveri da li je potrebno da se //import immutable from "immutable"
 import { configureStore } from
 "@redux.js/toolkit";
-
-export const initialState = [
+const initialState = {
+  flipped: no
+};
+export let images = [
   {
     name: "Chandler",
     pic: Chandler,
